@@ -1,0 +1,14 @@
+<h1>Social Networks dell'azienda: <%= @company.name%></h1>
+<ul>
+    <%@social_networks.each do |social_network|%>
+        <li><%= social_network.name%> |
+            <%= link_to "Edit", edit_company_social_network_path(@company, social_network)%>
+            |
+            <%= link_to "Delete Social Network", company_social_network_path(@company, social_network)%>
+        </li>
+    <%end%>
+</ul>
+
+<hr>
+<%= link_to "Add social network", new_company_social_network_path(@company)%>
+

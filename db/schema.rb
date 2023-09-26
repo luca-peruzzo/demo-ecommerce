@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_26_082542) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_26_084747) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -24,4 +24,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_26_082542) do
     t.string "web_site"
   end
 
+  create_table "social_networks", force: :cascade do |t|
+    t.string "name"
+    t.string "url"
+    t.bigint "company_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_social_networks_on_company_id"
+  end
+
+  add_foreign_key "social_networks", "companies"
 end
