@@ -1,6 +1,6 @@
 <h1>Companies</h1>
 <%if @companies.first.present?%>
-    <p>Show company</p>
+    <%= link_to "Show company", company_path(@companies.first)%>
 <%else%>
     <%= link_to "Add company", new_company_path%>
 <%end%>
