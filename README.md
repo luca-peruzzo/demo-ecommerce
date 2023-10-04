@@ -1,24 +1,16 @@
-# README
+## DEMO ECOMMERCE - REST API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### CREAZIONE DEL NAMESPACE API::V1
+Apriamo il file `config/routes.rb``
 
-Things you may want to cover:
+```ruby
+    namespace :api, defaults: { format: :json } do
+        namespace :v1 do
+            get "home/index", to: "home#index"
+            ...
+            ...
+            ...
+        end
+    end
+```
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
