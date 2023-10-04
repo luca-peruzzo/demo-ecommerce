@@ -1,6 +1,6 @@
 ## DEMO EOMMERCE - REST API
 
-[Corso Ruby On Rails](/public/rest_api/corso_ruby_on_rails_rest_api_schema_db.png "REST API")
+![Corso Ruby On Rails](/public/rest_api/corso_ruby_on_rails_rest_api_schema_db.png "REST API")
 
 
 Apriamo il file `config/routes.rb`
