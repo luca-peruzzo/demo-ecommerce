@@ -1,16 +1,11 @@
-## DEMO ECOMMERCE - REST API
+## DEMO ECOMMERCE 
+Creating a simple e-commerce website in Ruby on Rails.
 
-### CREAZIONE DEL NAMESPACE API::V1
-Apriamo il file `config/routes.rb``
+### Company
+* Store
 
-```ruby
-    namespace :api, defaults: { format: :json } do
-        namespace :v1 do
-            get "home/index", to: "home#index"
-            ...
-            ...
-            ...
-        end
-    end
-```
+### Products
+
+### Users
+
 
