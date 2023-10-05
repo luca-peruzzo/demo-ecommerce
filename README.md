@@ -23,10 +23,10 @@ Creazione di una semplice applicazione in Ruby on Rails che simula un piccolo si
 ### Gestione degli ordini
 * Work in progress
 
-### Users
+### Gestione degli utenti
 * Model user
 * Use Active Model `has_secure_password` with `gem bcrypt` 
-
+* [Endpoints API](/public/documentations/users/users.md)
 
 
 ### Rest api
