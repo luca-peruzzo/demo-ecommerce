@@ -6,7 +6,7 @@ Creazione di una semplice applicazione in Ruby on Rails che simula un piccolo si
 
 
 ### Company [Azienda]
-* [Modelli e "controllers"](/public/documentations/company/company.md)
+[Modelli e "controllers"](/public/documentations/company/company.md)
 * Modello Company [Azienda] 
 * Modello Store [Negozio]
 * Mdello Address [Indirizzo] (Work in progress)
@@ -29,10 +29,9 @@ Creazione di una semplice applicazione in Ruby on Rails che simula un piccolo si
 
 
 ### Rest api
-[Documentation on rest api with an example](/public/documentations/rest_api/name_space_rest_api.md "REST API")
 
-* Autentication
-* Crud REST API
+* [Autentication](/public/documentations/rest_api/name_space_rest_api.md "REST API")
+* [Crud REST API](/public/documentations/rest_api/api_crud_endpoint.md "API CRUD endpoint")
 * Documentation
 * Pagination
 
