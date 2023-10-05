@@ -3,6 +3,7 @@ Creazione di una semplice applicazione in Ruby on Rails che simula un piccolo si
 
 * [Come creare un'applicazione in Ruby on Rails?]()
 * [Trucchi in Ruby On Rails]()
+* [Codici HTTP comuni]()
 
 
 ### Company [Azienda]
