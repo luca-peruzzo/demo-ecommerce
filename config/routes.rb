@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
       get "home/index", to: "home#index"
-      resources :users, only: [:show]
+      resources :users, only: [:index, :show]
       resources :products, only: [:index, :show, :create, :update, :destroy]
       resources :articles, only: [:index, :show, :create, :destroy, :update]
       resources :companies, only: [:index, :show, :create, :destroy, :update]
