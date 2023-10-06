@@ -14,7 +14,12 @@ Rails.application.routes.draw do
       get "home/index", to: "home#index"
       resources :users, only: [:show]
       resources :products, only: [:index, :show, :create, :update, :destroy]
-     
+      resources :articles, only: [:index, :show, :create, :destroy, :update]
+      resources :companies, only: [:index, :show, :create, :destroy, :update]
+      resources :tags, only: [:index, :show, :create, :destroy, :update]
+      resources :social_networks, only: [:index, :show, :create, :destroy, :update]
+      resources :stores, only: [:index, :show, :create, :destroy, :update]
+      resources :categories, only: [:index, :show, :create, :destroy, :update]
     end
   end
 
