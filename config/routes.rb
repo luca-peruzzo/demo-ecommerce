@@ -16,6 +16,7 @@ Rails.application.routes.draw do
       get "home/index", to: "home#index"
 
       resources :users, only: [:index, :show, :create, :update, :destroy]
+      resources :orders, only: [:index, :show, :create]
 
       resources :products, only: [:index, :show, :create, :update, :destroy]
       resources :articles, only: [:index, :show, :create, :destroy, :update]
