@@ -1,3 +1,4 @@
+
 class Api::V1::UsersController < Api::V1::AuthenticatedController
     before_action :set_user, only: %i[show update destroy]
 
@@ -6,7 +7,7 @@ class Api::V1::UsersController < Api::V1::AuthenticatedController
         render json: @users
 
     end
-    
+
     def show
         #render json: @user
         #render json: UserSerializer.new(@user).serializable_hash.to_json

@@ -14,9 +14,16 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
       get "home/index", to: "home#index"
+
       resources :users, only: [:index, :show, :create, :update, :destroy]
+
       resources :products, only: [:index, :show, :create, :update, :destroy]
-     
+      resources :articles, only: [:index, :show, :create, :destroy, :update]
+      resources :companies, only: [:index, :show, :create, :destroy, :update]
+      resources :tags, only: [:index, :show, :create, :destroy, :update]
+      resources :social_networks, only: [:index, :show, :create, :destroy, :update]
+      resources :stores, only: [:index, :show, :create, :destroy, :update]
+      resources :categories, only: [:index, :show, :create, :destroy, :update]
     end
   end
 

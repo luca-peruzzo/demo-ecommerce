@@ -7,7 +7,8 @@ class User < ApplicationRecord
 
   validates :password, length: {minimum: 8, allow_blank: true}
 
-  has_many :api_tokens
-  has_many :products
+  has_many :products, dependent: :destroy
+  has_many :orders, dependent: :destroy
+  has_many :api_tokens, dependent: :destroy
 
 end
