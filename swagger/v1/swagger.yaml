@@ -1,0 +1,87 @@
+openapi: 3.0.0
+info:
+  title: Your API
+  version: 1.0.0
+paths:
+  /api/v1/products/{productId}:
+    get:
+      summary: Get a product by ID
+      parameters:
+        - in: path
+          name: productId
+          required: true
+          schema:
+            type: integer
+          description: The ID of the product to retrieve.
+      security:
+        - BearerAuth: []
+
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UnauthorizedError'
+
+        '404':
+          description: Record not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RecordNotFound'
+
+components:
+  schemas:
+    Product:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 0
+        name:
+          type: string
+          example: "string"
+        created_at:
+          type: string
+          format: date-time
+          example: "2023-04-15T19:32:53.182Z"
+        updated_at:
+          type: string
+          format: date-time
+          example: "2023-04-15T19:32:53.182Z"
+        url:
+          type: string
+          example: "string"
+
+    UnauthorizedError:
+      type: object
+      properties:
+        error:
+          type: string
+          example: "Unauthorized"
+        message:
+          type: string
+          example: "Invalid or missing authentication token."
+
+    RecordNotFound:
+      type: object
+      properties:
+        error:
+          type: string
+          example: "Not Found"
+        message:
+          type: string
+          example: "The requested resource was not found."
+
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
