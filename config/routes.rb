@@ -20,6 +20,7 @@ Rails.application.routes.draw do
       resources :social_networks, only: [:index, :show, :create, :destroy, :update]
       resources :stores, only: [:index, :show, :create, :destroy, :update]
       resources :categories, only: [:index, :show, :create, :destroy, :update]
+      resources :orders, only: [:index, :show, :create, :destroy, :update]
     end
   end
 
