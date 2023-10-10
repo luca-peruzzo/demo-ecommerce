@@ -1,12 +1,23 @@
 class Api::V1::ProductsController < Api::V1::AuthenticatedController
+
+=begin
   def index
     @products = Product.all
     render json: @products
+  end
+=end
+  def index
+    @products = Product.search(params)
+    #render json: ProductSerializer.new(@products).serializable_hash.to_json
+    render json: @products 
+   
   end
 
   def show 
     @product = Product.find(params[:id])
     render json: @product
+    #render json: ProductSerializer.new(@product).serializable_hash.to_json
+    
   end
 
   def create

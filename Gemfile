@@ -74,3 +74,7 @@ end
 
 gem 'simple_form'
 gem 'jsonapi-serializer'
+
+gem 'rswag-api'
+gem 'rswag-ui'
+gem "faker", "~> 3.2"

@@ -5,3 +5,23 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+
+ApiToken.delete_all
+Product.delete_all
+User.delete_all
+
+3.times do
+    user = User.create! email: Faker::Internet.email, password: 'locadex1234'
+    user.api_tokens.create
+    puts "Created a new user: #{user.email}"
+
+    2.times do
+        product = Product.create!(
+            name: Faker::Commerce.product_name,
+            price: rand(1.0..100.0),
+            user_id: user.id
+        )
+        puts "Created a brand new product: #{product.name}"
+        end
+end
