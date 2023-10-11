@@ -3,7 +3,7 @@ class Api::V1::ArticlesController < Api::V1::AuthenticatedController
   protect_from_forgery with: :null_session
 
   def index
-    @articles = Article.all
+    @articles = Article.search(params)
     render json: @articles
   end
 
