@@ -5,6 +5,7 @@ class Order < ApplicationRecord
   has_many :order_products, dependent: :destroy
   has_many :products, through: :order_products
 
+  scope :filter_by_total, lambda { |amount| where('total > ?', amount) }
   
   before_validation :set_total!
   def set_total!
